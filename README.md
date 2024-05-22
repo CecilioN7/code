@@ -1,6 +1,29 @@
-# Code Structure Goal
+# TOP OF FILE
+Example
+
+NAME: Cecilio Navarro
+ASGT: Lab 1
+ORGN: CSUB - CMPS 3500
+FILE: bubble_sort.py
+DATE: Wed May 22 2024
+
+# VARIABLES - SNAKE CASE
+Variables should begin with a lowercase letter. Even better if lower case variables are used exclusively. Variables with multiple word components should be connected with underscore character. This is often called snake case notation. Some examples:
+
+    a, i, j
+    one, result, var23
+    m_verbose, initial_temperature, best_so_far
+
+# CAMEL-HUMP - METHODS/FUNCITONS
+Camel-hump notation uses a capital letter for each word component in the class name except for the first letter. By always beginning with a small letter, class functions are easily distinguishable from class names, which also use camel-hump notation. Some examples:
+
+    getFirstElement()
+    addIvPFunction()
+    solveIPP()
+
+# CODE STRUCTURE GOAL
 code/
-├── learning/
+├── resources/
 │   ├── syntax/
 │   │   ├── language1_syntax.md
 │   │   ├── language2_syntax.md
