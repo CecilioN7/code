@@ -1,3 +1,8 @@
+# NAME: Cecilio Navarro
+# ORGN: https://www.youtube.com/watch?v=y9VG3Pztok8 + Chat GPT
+# FILE: pygame_template.py
+# DATE: Wed May 22 2024
+
 import pygame
 import sys
 

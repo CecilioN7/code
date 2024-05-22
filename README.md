@@ -7,6 +7,12 @@ ORGN: CSUB - CMPS 3500
 FILE: bubble_sort.py
 DATE: Wed May 22 2024
 
+# COPY + PASTE
+NAME: Cecilio Navarro
+ORGN: 
+FILE: 
+DATE: 
+
 # VARIABLES - SNAKE CASE
 Variables should begin with a lowercase letter. Even better if lower case variables are used exclusively. Variables with multiple word components should be connected with underscore character. This is often called snake case notation. Some examples:
 
