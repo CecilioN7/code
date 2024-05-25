@@ -1,4 +1,4 @@
-# Example
+## TOP OF FILE EXAMPLE
 
 **NAME:** Cecilio Navarro  
 **ASGT:** Lab 1  
@@ -6,13 +6,13 @@
 **FILE:** bubble_sort.py  
 **DATE:** Wed May 22 2024
 
-## COPY + PASTE
-**NAME:** Cecilio Navarro  
-**ORGN:**   
-**FILE:**   
-**DATE:**   
+### COPY + PASTE
+NAME: Cecilio Navarro  
+ORGN:  
+FILE:   
+DATE: 
 
-## Variables - Snake Case
+## Snake Case - Variables
 
 Variables should begin with a lowercase letter. Even better if lowercase variables are used exclusively. Variables with multiple word components should be connected with an underscore character. This is often called snake case notation. Some examples:
 
@@ -31,7 +31,6 @@ Camel-hump notation uses a capital letter for each word component in the method/
 ## Code Structure Goal
 
 The goal is to maintain a clear and consistent code structure. By following the above conventions for variable names and method/function names, the code will be more readable and maintainable.
-
 
 ```plaintext
 code/
