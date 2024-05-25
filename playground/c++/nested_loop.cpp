@@ -2,6 +2,7 @@
 // FILE: nested_loop.cpp
 // DATE: Sat May 25 2024
 // g++ nestedloop.cpp -o nested_loop -Wall
+// n(n-1) / 2
 
 #include <iostream>
 using namespace std;

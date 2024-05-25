@@ -1,33 +1,39 @@
-# TOP OF FILE
-Example
+# Example
 
-NAME: Cecilio Navarro
-ASGT: Lab 1
-ORGN: CSUB - CMPS 3500
-FILE: bubble_sort.py
-DATE: Wed May 22 2024
+**NAME:** Cecilio Navarro  
+**ASGT:** Lab 1  
+**ORGN:** CSUB - CMPS 3500  
+**FILE:** bubble_sort.py  
+**DATE:** Wed May 22 2024
 
-# COPY + PASTE
-NAME: Cecilio Navarro
-ORGN: 
-FILE: 
-DATE: 
+## COPY + PASTE
+**NAME:** Cecilio Navarro  
+**ORGN:**   
+**FILE:**   
+**DATE:**   
 
-# VARIABLES - SNAKE CASE
-Variables should begin with a lowercase letter. Even better if lower case variables are used exclusively. Variables with multiple word components should be connected with underscore character. This is often called snake case notation. Some examples:
+## Variables - Snake Case
 
-    a, i, j
-    one, result, var23
-    m_verbose, initial_temperature, best_so_far
+Variables should begin with a lowercase letter. Even better if lowercase variables are used exclusively. Variables with multiple word components should be connected with an underscore character. This is often called snake case notation. Some examples:
 
-# CAMEL-HUMP - METHODS/FUNCITONS
-Camel-hump notation uses a capital letter for each word component in the class name except for the first letter. By always beginning with a small letter, class functions are easily distinguishable from class names, which also use camel-hump notation. Some examples:
+- `a`, `i`, `j`
+- `one`, `result`, `var23`
+- `m_verbose`, `initial_temperature`, `best_so_far`
 
-    getFirstElement()
-    addIvPFunction()
-    solveIPP()
+## Camel-Hump - Methods/Functions
 
-# CODE STRUCTURE GOAL
+Camel-hump notation uses a capital letter for each word component in the method/function name except for the first letter. By always beginning with a small letter, methods/functions are easily distinguishable from class names, which also use camel-hump notation. Some examples:
+
+- `getFirstElement()`
+- `addIvPFunction()`
+- `solveIPP()`
+
+## Code Structure Goal
+
+The goal is to maintain a clear and consistent code structure. By following the above conventions for variable names and method/function names, the code will be more readable and maintainable.
+
+
+```plaintext
 code/
 ├── playground/
 │   ├── experiments/
