@@ -1,4 +1,4 @@
-## TOP OF FILE EXAMPLE
+## Top Of File Example
 
 **NAME:** Cecilio Navarro  
 **ASGT:** Lab 1  
@@ -20,7 +20,7 @@ Variables should begin with a lowercase letter. Even better if lowercase variabl
 - `one`, `result`, `var23`
 - `m_verbose`, `initial_temperature`, `best_so_far`
 
-## Camel-Hump - Methods/Functions
+## Camel-Hump - Methods / Functions
 
 Camel-hump notation uses a capital letter for each word component in the method/function name except for the first letter. By always beginning with a small letter, methods/functions are easily distinguishable from class names, which also use camel-hump notation. Some examples:
 
@@ -110,4 +110,4 @@ code/
     ├── databases/
     ├── networking/
     ├── operating_systems/
-    ├── version_control/
+    └── version_control/
