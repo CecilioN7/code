@@ -1,3 +1,8 @@
+# NAME: Cecilio Navarro
+# ORGN:
+# FILE: time_is_money.py
+# DATE: Thu Aug 15, 2024
+
 import pygame
 from datetime import datetime, timedelta
 

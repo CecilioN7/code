@@ -1,26 +1,49 @@
-from pytube import YouTube
-from pydub import AudioSegment
-import os
+import yt_dlp
 
-def download_youtube_video_as_mp3(url, output_path):
-    # Download the video
-    yt = YouTube(url)
-    video = yt.streams.filter(only_audio=True).first()
-    downloaded_file = video.download(output_path=output_path)
+def download_live_stream_and_audio(video_url):
+    # Define options for downloading the best video and audio
+    ydl_opts = {
+        'format': 'bestvideo+bestaudio/best',  # Best video + best audio
+        'live_from_start': True,  # Download from the start of live stream if possible
+        'noplaylist': True,  # Download only the individual video, not the playlist
+        'outtmpl': '%(title)s.%(ext)s',  # Output template for merged video+audio
+        'merge_output_format': 'mp4',  # Merge into MP4 format
+        'postprocessors': [{
+            'key': 'FFmpegVideoConvertor',
+            'preferedformat': 'mp4',  # Merge into mp4 format for video
+        }]
+    }
 
-    # Convert to MP3
-    base, ext = os.path.splitext(downloaded_file)
-    mp3_file = base + '.mp3'
-    audio = AudioSegment.from_file(downloaded_file)
-    audio.export(mp3_file, format='mp3')
+    # Define options for extracting the audio file separately
+    audio_opts = {
+        'format': 'bestaudio/best',  # Download the best available audio
+        'outtmpl': '%(title)s_audio.%(ext)s',  # Save audio with '_audio' suffix
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',  # Extract audio to MP3 format (or use 'm4a' for m4a format)
+            'preferredquality': '192',  # Set the quality of the audio (192 kbps)
+        }],
+    }
 
-    # Remove the original file
-    os.remove(downloaded_file)
+    try:
+        # First, download the best video and audio combined
+        print("Downloading video and audio (best quality)...")
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([video_url])
 
-    return mp3_file
+        # Next, download and extract only the audio
+        print("Extracting audio file separately...")
+        with yt_dlp.YoutubeDL(audio_opts) as ydl:
+            ydl.download([video_url])
+
+        print("Download complete! Video+Audio and separate audio file saved.")
+    
+    except Exception as e:
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url = input("Enter the YouTube video URL: ")
-    output_path = input("Enter the output path (default is current directory): ") or "."
-    mp3_file = download_youtube_video_as_mp3(url, output_path)
-    print(f"MP3 file saved as {mp3_file}")
+    # Ask the user for the live stream URL
+    video_url = input("Enter the YouTube live stream URL: ")
+
+    # Start downloading the video and extracting audio
+    download_live_stream_and_audio(video_url)
